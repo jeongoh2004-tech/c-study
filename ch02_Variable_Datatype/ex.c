@@ -1,4 +1,4 @@
-/*2장변수와 자료형*/
+/*2장 변수와 자료형 실습 문제*/
 /*문제3
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
