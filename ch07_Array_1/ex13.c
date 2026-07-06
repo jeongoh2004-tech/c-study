@@ -1,0 +1,15 @@
+/*7장 배열 실습 문제*/
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+int main()
+{
+    char ch[10];
+    for(int i=0; i<10; i++){
+        scanf("%c", &ch[i]);
+    }
+    for(int i=0; i<10; i++){
+        if(ch[i]>='A'&& ch[i]<='Z')
+            printf(" %c", ch[i]);
+    }
+    return 0;
+} 
