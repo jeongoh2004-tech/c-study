@@ -7,10 +7,12 @@ typedef struct{
     int kor, eng, math;
     double avg;
 }student;
+
 void read_data(student *st);
 void cal_avg(student *st);
 void sort(student *st);
 void print_score(student *st);
+
 int main(){
     student st[10];
     read_data(st);
