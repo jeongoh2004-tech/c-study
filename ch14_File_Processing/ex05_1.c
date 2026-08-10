@@ -16,8 +16,8 @@ int main(){
     }
     for(student *p=st; p<st+3; p++){
         scanf("%s %d", p->name, &p->score);
-        fwrite(p, sizeof(student), 1, fp);
     }
+    fwrite(st, sizeof(student), 3, fp);
     fclose(fp);
     return 0;
 }

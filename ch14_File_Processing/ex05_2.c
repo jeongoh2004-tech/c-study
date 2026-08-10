@@ -14,8 +14,8 @@ int main(){
         printf("fail");
         return -1;
     }
+    fread(st, sizeof(student), 3, fp);
     for(student *p=st; p<st+3; p++){
-        fread(p, sizeof(student), 1, fp);
         printf("%s %d\n", p->name, p->score);
     }
     fclose(fp);
