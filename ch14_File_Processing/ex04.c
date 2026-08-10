@@ -6,22 +6,20 @@
 int main(){
     char file1[21], file2[21];
     scanf("%s", file1); scanf("%s", file2);
-    FILE *fp1=fopen(file1, "r");
+    FILE *fp1=fopen(file1, "a");
     if(fp1==NULL){
         printf("fail");
         return -1;
     }
-    FILE *fp2=fopen(file2, "w");
+    FILE *fp2=fopen(file2, "r");
     if(fp2==NULL){
         printf("fail");
         return -1;
     }
-    int ch=fgetc(fp1);
-    while(!feof(fp1)){
-        fputc(ch, fp2);
-        ch=fgetc(fp1);
+    int ch=fgetc(fp2);
+    while(!feof(fp2)){
+        fputc(ch, fp1);
+        ch=fgetc(fp2);
     }
-    fclose(fp1);
-    fclose(fp2);
     return 0;
 }
